@@ -1,0 +1,42 @@
+-- see: https://github.com/lervag/vimtex
+--
+-- Press \ll to start (or stop) compiling the document.
+-- This turns on automatic compiling if supported by your compiler.
+--
+-- Press \lk to stop the compilation process.
+-- Press \lc to clear auxiliary files.
+
+-- Starting server for LaTeX inverse search.
+--vim.cmd([[
+	--function! s:myinversetex()
+		--if !filereadable('/tmp/sv4nvim' . expand("%:p"))
+			--call mkdir('/tmp/sv4nvim" . expand("%:p:h"),"p")
+			--call serverstart('tmp/sv4nvim' . expand("%:p"))
+		--endif
+	--endfunction
+	--command! Serverorig call s:myinversetex()
+--
+	--augroup latex_new
+		--autocmd!
+		--autocmd BufRead *.tex Serverorig
+		--autocmd BufRead *.ltx Serverorig
+		--autocmd BufWritePost *.tex Serverorig
+		--autocmd BufWritePost *.ltx Serverorig
+	--augroup END
+--]])
+
+-- auto start deoplete package.
+--vim.cmd([[
+	--let g:deoplete#enable_at_startup = 1
+	--call deoplete#custom#var('omni', 'input_patterns', {
+		--\ 'tex': g:vimtex#re#deoplete
+		--\})
+--]])
+
+-- Setting ALE (Asyncronus Linting Engine)
+--vim.cmd([[
+	--let g:ale_echo_msg_error_str = 'E'
+	--let g:ale_echo_msg_warning_str = 'W'
+	--let g:ale_echo_msg_format = '[%linter%] %s [%server%]'
+	--let g:ale_lint_on_text_changed = 'always'
+--]])
