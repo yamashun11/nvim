@@ -2,8 +2,8 @@
 -- |- lua
 -- |  |- *.lua
 -- |-init.lua
--- require("*")
 
+-- require("*")
 require("base")
 require("options")
 require("autocmd")
