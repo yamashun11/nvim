@@ -1,4 +1,6 @@
 require("toggleterm").setup({
+	size = 20,
+	--[[
 	function(term)
 		if term.directon == "horizontal" then
 			return 15
@@ -6,11 +8,13 @@ require("toggleterm").setup({
 			return vim.o.colums * 0.4
 		end
 	end,
+	]]
 	start_in_insert = true,
 	--direction = "vertical" | "horizontal" | "tab" | "float",
-	direction = "horizontal",
-	--direction = "float",
+	--direction = "horizontal",
+	direction = "float",
 	close_on_exit = true,
+
 	auto_scroll = true,
 	float_opts = {
 		--border = "single" | "double"  | "shadow" | "curved" | ... other options supported by win open
@@ -34,5 +38,3 @@ local lazygit = Terminal:new({
 function _lazygit_toggle()
 	lazygit:toggle()
 end
-
-vim.api.nvim_set_keymap("n", "lg", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
