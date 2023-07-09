@@ -104,3 +104,7 @@ sudo /usr/local/texlive/20XX/bin/X/tlmgr path add
 pip3 install fortran-language-server  
 ```
 - TODO
+
+## Git
+
+toggleterm.nvim + lazygit が良い
