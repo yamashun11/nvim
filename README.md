@@ -17,13 +17,11 @@ chmod u+x nvim.appimage
 
 `/usr/local/bin` 等，パス通ってるところにシンボリックリンク貼ると良い
 
-### Remote
+## Install (remote server)
 
-実行ファイルを転送してパス通すだけ  
-ただし，LSP関連と一部プラグインは動かない
-
-またはローカルから sshfs 等でマウントして，ローカルの Neovim から参照する  
-その場合は .bashrc と .bash_logout でうまくやると楽
+ローカルから実行ファイルを転送する  
+またはローカルから sshfs 等で mount して，ローカルの Neovim から参照する  
+- その際は mount を alias で，umount を .bash_logout でやると良い
 
 ## Share Clipboard between Neovim and Windows
 
@@ -70,14 +68,14 @@ sudo apt install python3
 sudo apt install python3-pip  
 sudo apt install python3-venv  
 ```
-- pyright (required: npm)
+- pyright (static type checker; required: npm)
 - black (formatter; required: venv)
 - isort (import formatter)
 - flake8 (linter)
 
 ## Lua
 
-- lua-language-server (lua_ls)
+- lua-language-server (language server)
 - Stylua (formatter)
 - luacheck (linter; required: luarock)
 
@@ -93,10 +91,9 @@ sudo /usr/local/texlive/20XX/bin/X/tlmgr path add
 ```
 - latexmk (config: ~/.latexmkrc; compiler: uplatex)
 - qpdfview (viewer)
-- TODO (linter)
-- TODO (completion)
-- TODO (forward search)
-- TODO (inverse search)
+- texlab (language server)
+- chktex (linter)
+- latexindent (formatter)
   
 ## Markdown  
 - marksman

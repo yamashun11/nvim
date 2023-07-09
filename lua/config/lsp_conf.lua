@@ -20,6 +20,27 @@ require("mason-lspconfig").setup_handlers({
 			},
 		})
 	end,
+	texlab = function()
+		require("lspconfig").texlab.setup({
+			texlab = {
+				auxDirectory = ".",
+				bibtexFormatter = "latexindent",
+				--build = {},
+				chktex = {
+					onEdit = true,
+					onOpenAndSave = true,
+				},
+				diagnosticsDelay = 300,
+				formatterLineLength = 80,
+				forwardSearch = {
+				},
+				latexFormatter = "latexindent",
+				latexindent = {
+					modifyLineBreaks = false
+				},
+			}
+		})
+	end,
 })
 
 local null_ls = require("null-ls")
