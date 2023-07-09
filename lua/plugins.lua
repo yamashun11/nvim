@@ -68,6 +68,15 @@ require("packer").startup(function()
 	-- Window resizer
 	use("simeji/winresizer")
 
+	-- Terminal
+	use({
+		"akinsho/toggleterm.nvim",
+		tag = "*",
+		config = function()
+			require("config.toggleterm_conf")
+		end,
+	})
+
 	-- cmd and notice position
 	use({
 		"folke/noice.nvim",
