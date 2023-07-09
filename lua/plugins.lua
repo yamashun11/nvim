@@ -82,19 +82,6 @@ require("packer").startup(function()
 	use("MunifTanjim/nui.nvim")
 	use("rcarriga/nvim-notify")
 
-	--[[
-	-- Auto-session
-	use {
-		"rmagatti/auto-session",
-		config = function ()
-			require("auto-session").setup {
-				log_level = "error",
-				auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/"},
-			}
-		end
-	}
-	]]
-
 	-- highlightedyank
 	use("machakann/vim-highlightedyank")
 
@@ -135,28 +122,6 @@ require("packer").startup(function()
 	use("onsails/lspkind.nvim")
 
 	-- Latex
-	--vim.g["tex_flavor"] = "latex"
-	--use({
-	--"jakewvincent/texmagic.nvim",
-	--config = function()
-	--require("texmagic").setup({
-	--engines = {
-	--lualatex = {
-	--executable = "latexmk",
-	--args = {
-	--"pdflua",
-	--"-interaction=nonstopmode",
-	--"-synctex=1",
-	--"-pv",
-	--"%f"
-	--},
-	--isContinuous = false
-	--}
-	--}
-	--})
-	--end
-	--})
-
 	use({
 		"lervag/vimtex",
 		config = function()
