@@ -29,17 +29,17 @@ chmod u+x nvim.appimage
 
 - Windows に win32yank.exe をインストールする
   - scoop でインストールする場合（Powershell）  
-    ```
-    Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
-    iwr -useb get.scoop.sh | iex
+```
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+iwr -useb get.scoop.sh | iex
 
-    scoop install win32yank
-    ```
+scoop install win32yank
+```
 
 - init.lua から読めるところ（本リポジトリでは options.lua）に以下を追記
-    ```
-    vim.cmd("set clipboard+=unnamedplus")
-    ```
+```
+vim.cmd("set clipboard+=unnamedplus")
+```
 
 ## Plugin Manager
 
