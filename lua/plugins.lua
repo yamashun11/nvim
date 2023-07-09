@@ -131,14 +131,6 @@ require("packer").startup(function()
 	use("onsails/lspkind.nvim")
 
 	-- Latex
-	use({
-		"lervag/vimtex",
-		config = function()
-			require("config.vimtex_conf")
-		end,
-	})
-	--use("Shougo/deoplete.nvim")
-	--use("dense-analysis/ale")
 
 	-- Markdown
 	use({
