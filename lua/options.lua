@@ -1,5 +1,4 @@
---vim.opt.clipboard = "unnamedplus"
-vim.cmd "set clipboard+=unnamedplus"
+vim.cmd("set clipboard+=unnamedplus")
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 vim.opt.ignorecase = true
