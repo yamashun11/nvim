@@ -76,8 +76,12 @@ sudo apt install python3-venv
 - flake8 (linter)
 
 ## Lua
+
+- lua-language-server (lua_ls)
 - Stylua (formatter)
 - luacheck (linter; required: luarock)
+
+lua_ls と luacheck が "vim" と "use" に warning 出すので global 設定すること
   
 ## LaTeX  
 
