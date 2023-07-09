@@ -7,51 +7,51 @@ require("packer").startup(function()
 	-- Dashboard
 	use("mhinz/vim-startify")
 
-		-- Colorscheme
-	use {
+	-- Colorscheme
+	use({
 		"marko-cerovac/material.nvim",
 		config = function()
 			require("config.material_conf")
 		end,
-	}
+	})
 
 	-- File explorer
-	use {
+	use({
 		"lambdalisue/fern.vim",
 		config = function()
 			require("config.fern_conf")
 		end,
-	}
+	})
 	use("lambdalisue/nerdfont.vim")
 	use("lambdalisue/fern-renderer-nerdfont.vim")
 	use("lambdalisue/glyph-palette.vim")
 
 	-- Finder
-	use {
+	use({
 		"nvim-telescope/telescope.nvim",
 		config = function()
 			require("config.telescope_conf")
 		end,
-	}
+	})
 	use("nvim-lua/plenary.nvim")
 	use("nvim-tree/nvim-web-devicons")
 
 	-- Scroll bar
-	use {
+	use({
 		"petertriho/nvim-scrollbar",
 		config = function()
 			require("config.scrollbar_conf")
 		end,
-	}
-	use {
+	})
+	use({
 		"kevinhwang91/nvim-hlslens",
 		config = function()
 			require("config.hlslens_conf")
 		end,
-	}
+	})
 
 	-- Status bar
-	use {
+	use({
 		"nvim-lualine/lualine.nvim",
 		config = function()
 			require("config.lualine_conf")
@@ -59,7 +59,7 @@ require("packer").startup(function()
 		requires = {
 			"nvim-tree/nvim-web-devicons",
 		},
-	}
+	})
 
 	-- Tab bar
 	use("zefei/vim-wintabs")
@@ -69,7 +69,7 @@ require("packer").startup(function()
 	use("simeji/winresizer")
 
 	-- cmd and notice position
-	use {
+	use({
 		"folke/noice.nvim",
 		config = function()
 			require("config.noice_conf")
@@ -78,7 +78,7 @@ require("packer").startup(function()
 			"MunifTanjim/nui.nvim",
 			"rcarriga/nvim-notify",
 		},
-	}
+	})
 	use("MunifTanjim/nui.nvim")
 	use("rcarriga/nvim-notify")
 
@@ -112,6 +112,7 @@ require("packer").startup(function()
 			"hrsh7th/cmp-nvim-lsp",
 		},
 	})
+	-- Use a Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua.
 	use({
 		"jose-elias-alvarez/null-ls.nvim",
 		requires = "nvim-lua/plenary.nvim",
@@ -136,40 +137,39 @@ require("packer").startup(function()
 	-- Latex
 	--vim.g["tex_flavor"] = "latex"
 	--use({
-		--"jakewvincent/texmagic.nvim",
-		--config = function()
-			--require("texmagic").setup({
-				--engines = {
-					--lualatex = {
-						--executable = "latexmk",
-						--args = {
-							--"pdflua",
-							--"-interaction=nonstopmode",
-							--"-synctex=1",
-							--"-pv",
-							--"%f"
-						--},
-						--isContinuous = false
-					--}
-				--}
-			--})
-		--end
+	--"jakewvincent/texmagic.nvim",
+	--config = function()
+	--require("texmagic").setup({
+	--engines = {
+	--lualatex = {
+	--executable = "latexmk",
+	--args = {
+	--"pdflua",
+	--"-interaction=nonstopmode",
+	--"-synctex=1",
+	--"-pv",
+	--"%f"
+	--},
+	--isContinuous = false
+	--}
+	--}
+	--})
+	--end
 	--})
 
-	use	{
+	use({
 		"lervag/vimtex",
-		config = function ()
+		config = function()
 			require("config.vimtex_conf")
 		end,
-	}
+	})
 	--use("Shougo/deoplete.nvim")
 	--use("dense-analysis/ale")
 
 	-- Markdown
-	use {
+	use({
 		"iamcco/markdown-preview.nvim",
 		ft = "markdown",
 		run = "cd app && npm install",
-	}
-
+	})
 end)
