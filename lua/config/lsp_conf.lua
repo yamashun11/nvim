@@ -32,24 +32,29 @@ require("mason-lspconfig").setup_handlers({
 				},
 				diagnosticsDelay = 300,
 				formatterLineLength = 80,
-				forwardSearch = {
-				},
+				forwardSearch = {},
 				latexFormatter = "latexindent",
 				latexindent = {
-					modifyLineBreaks = false
+					modifyLineBreaks = false,
 				},
-			}
+			},
 		})
+	end,
+	pyright = function()
+		require("lspconfig").pyright.setup({})
 	end,
 })
 
 local null_ls = require("null-ls")
 null_ls.setup({
+	diagnostic_config = {
+		virtual_text = false,
+	},
 	sources = {
-		null_ls.builtins.formatting.black, -- python formatter
-		null_ls.builtins.formatting.isort, -- python import sort
-		null_ls.builtins.diagnostics.flake8, --python linter
-		null_ls.builtins.formatting.stylua, -- lua formatter
+		null_ls.builtins.formatting.black,   -- python formatter
+		null_ls.builtins.formatting.isort,   -- python import sort
+		null_ls.builtins.diagnostics.flake8,--python linter
+		null_ls.builtins.formatting.stylua,    -- lua formatter
 		null_ls.builtins.diagnostics.luacheck.with({ -- lua linter
 			extra_args = { "--globals", "vim", "--globals", "use" },
 		}),
