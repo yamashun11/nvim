@@ -133,9 +133,5 @@ require("packer").startup(function()
 	-- Latex
 
 	-- Markdown
-	use({
-		"iamcco/markdown-preview.nvim",
-		ft = "markdown",
-		run = "cd app && npm install",
-	})
+	use("iamcco/markdown-preview.nvim")
 end)

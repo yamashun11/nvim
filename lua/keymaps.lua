@@ -16,8 +16,8 @@ vim.api.nvim_set_keymap("n", "<Leader>fn", ":Telescope notify<CR>", { noremap = 
 vim.api.nvim_set_keymap("n", "<Leader>fo", ":Telescope oldfiles<CR>", { noremap = true, silent = true })
 
 -- vim-wintabs
-vim.api.nvim_set_keymap("n", "<C-h>", ":WintabsPrevious<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-l>", ":WintabsNext<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-T>h", ":WintabsPrevious<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-T>l", ":WintabsNext<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-T>c", ":WintabsClose<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-T>u", ":WintabsUndo<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-T>o", ":WintabsOnly<CR>", { noremap = true, silent = true })
@@ -26,7 +26,10 @@ vim.api.nvim_set_keymap("n", "<C-W>o", ":WintabsOnlyWindow<CR>", { noremap = tru
 
 -- toggleterm and lazygit
 vim.api.nvim_set_keymap("n", "<Leader>t", ":ToggleTerm<CR>", {noremap= true, silent = true})
-vim.api.nvim_set_keymap("n", "lg", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>lg", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
+
+-- markdown preview
+vim.api.nvim_set_keymap("n", "<Leader>mp", ":MarkdownPreview<CR>", {noremap= true, silent = true})
 
 -- LSP
 vim.keymap.set("n", "ge", vim.diagnostic.open_float)

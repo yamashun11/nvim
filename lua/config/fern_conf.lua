@@ -1,7 +1,5 @@
 vim.g ["fern#default_hidden"] = true
-
 vim.g ["fern#renderer"] = "nerdfont"
-
 vim.cmd([[
 	augroup lua
 		autocmd!
