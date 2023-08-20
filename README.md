@@ -61,7 +61,7 @@ Nerd Font 対応のフォントを使用することで，ディレクトリ・�
 
 ## Telescope
 
-- live_grep 機能の使用には ripgrep が必要
+live_grep 機能の使用には ripgrep が必要
 ```
 sudo apt install ripgrep
 ```
