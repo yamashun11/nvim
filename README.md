@@ -88,11 +88,14 @@ lua_ls と luacheck が "vim" と "use" に warning を出すので global 設�
 
 ## LaTeX  
 
-20XX は適宜変更する
+????, \* は適宜変更する  
+ex: `sudo /usr/local/texlive/2023/bin/x86_64-linux/tlmgr path add`
 ```
 curl -OL http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz  
 tar xvf install-tl-unx.tar.gz
-sudo /usr/local/texlive/20XX/bin/X/tlmgr path add
+cd install-tl-2*
+sudo ./install-tl
+sudo /usr/local/texlive/????/bin/*/tlmgr path add
 ```
 - latexmk (config: ~/.latexmkrc; compiler: uplatex)
 - qpdfview (viewer)
