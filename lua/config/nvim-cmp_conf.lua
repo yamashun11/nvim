@@ -20,7 +20,7 @@ cmp.setup({
 		["<C-n"] = cmp.mapping.select_next_item(), -- move down
 		["<C-y>"] = cmp.mapping.complete(),
 		["<C-e>"] = cmp.mapping.abort(),
-		["<C-Space>"] = cmp.mapping.confirm({ select = true }), -- comfirm completion
+		["<C-m>"] = cmp.mapping.confirm({ select = true }), -- comfirm completion
 	}),
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" },
