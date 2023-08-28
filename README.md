@@ -118,10 +118,16 @@ yarn build
 ```
 
 ## Fortran
+
 ```
-pip3 install fortran-language-server  
+pip3 install fortran-language-server fprettify 
+mkdir ~/.fortls
 ```
-- TODO
+
+usage (example): `fprettify --indent 4 --strict-indent --strip-comments test.f90`
+
+- fortls (language server)
+- fprettify (formatter)
 
 ## Git
 
