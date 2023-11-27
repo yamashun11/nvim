@@ -133,5 +133,13 @@ require("packer").startup(function()
 	-- Latex
 
 	-- Markdown
-	use("iamcco/markdown-preview.nvim")
+	use({
+		"iamcco/markdown-preview.nvim",
+		config = function()
+			require("config.markdown-preview_conf")
+		end,
+	})
+
+	-- Restore IME status
+	use("h-hg/fcitx.nvim")
 end)
