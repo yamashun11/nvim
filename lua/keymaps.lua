@@ -2,6 +2,8 @@ vim.g.mapleader = " "
 
 vim.api.nvim_set_keymap("i", "jj", "<esc>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("t", "jj", "<C-\\><C-n>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "っｊ", "<esc>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("t", "っｊ", "<C-\\><C-n>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Leader><Leader>", "<C-w>w", { noremap = true, silent = true })
 
 -- Fern
