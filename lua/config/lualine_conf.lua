@@ -29,8 +29,6 @@ require("lualine").setup {
     lualine_z = {"location"}
   },
   inactive_sections = {
-    lualine_a = {},
-    lualine_b = {},
     lualine_a = {"mode"},
     lualine_b = {"branch", "diff", "diagnostics"},
     lualine_c = {"filename"},
