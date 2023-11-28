@@ -77,7 +77,7 @@ require("packer").startup(function()
 		end,
 	})
 
-	-- cmd and notice position
+	-- Cmd and notice position
 	use({
 		"folke/noice.nvim",
 		config = function()
@@ -125,12 +125,31 @@ require("packer").startup(function()
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
 	use("hrsh7th/cmp-cmdline")
-	--use "hrsh7th/vim-vsnip"
-	--use "hrsh7th/cmp-vsnip"
 	use("L3MON4D3/LuaSnip")
 	use("onsails/lspkind.nvim")
 
+	-- Snippets
+	use({
+		"SirVer/ultisnips",
+		config = function()
+			require("config.ultisnips_conf")
+		end,
+	})
+	use("honza/vim-snippets")
+
 	-- Latex
+	use({
+		"lervag/vimtex",
+		config = function()
+			require("config.vimtex_conf")
+		end,
+	})
+	use({
+		"Shougo/deoplete.nvim",
+		config = function()
+			require("config.deoplete_conf")
+		end,
+	})
 
 	-- Markdown
 	use({
