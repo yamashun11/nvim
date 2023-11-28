@@ -97,11 +97,13 @@ cd install-tl-2*
 sudo ./install-tl
 sudo /usr/local/texlive/????/bin/*/tlmgr path add
 ```
-- latexmk (config: ~/.latexmkrc; compiler: uplatex)
-- qpdfview (viewer)
-- texlab (language server)
-- chktex (linter)
-- latexindent (formatter)
+- Base plugin: vimtex
+- Compile: latexmk (config: ~/.latexmkrc; compiler: uplatex)
+- Completion: vimtex, deoplete
+- Snippet: ultisnips, vim-snippets
+- Viewer: okular
+- Forward search: <LocalLeader>lv
+- Inverse search: none
   
 ## Markdown  
 - marksman
