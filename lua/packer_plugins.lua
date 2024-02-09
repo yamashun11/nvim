@@ -160,6 +160,10 @@ require("packer").startup({
     use({
       "iamcco/markdown-preview.nvim",
       run = "cd app && npm install",
+      setup = function ()
+        vim.g.mkdp_filetypes = { "markdown" }
+      end,
+      ft = { "markdown" },
       config = function()
         require("config.markdown-preview_conf")
       end,
@@ -168,10 +172,6 @@ require("packer").startup({
     -- Git
     use({
       "lewis6991/gitsigns.nvim",
-      setup = function ()
-        vim.g.mkdp_filetypes = { "markdown" }
-      end,
-      ft = { "markdown" },
       config = function()
         require("config.gitsigns_conf")
       end,

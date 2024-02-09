@@ -43,14 +43,22 @@ vim.keymap.set("n", "<Leader>m", "<Cmd>MarkdownPreview<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>n", "<Cmd>noh<CR>", { silent = true })
 
 -- hlslens
-vim.keymap.set('n', 'n', [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]],
-  { silent = true })
-vim.keymap.set('n', 'N', [[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]],
-  { silent = true })
-vim.keymap.set('n', '*', [[*<Cmd>lua require('hlslens').start()<CR>]], { silent = true })
-vim.keymap.set('n', '#', [[#<Cmd>lua require('hlslens').start()<CR>]], { silent = true })
-vim.keymap.set('n', 'g*', [[g*<Cmd>lua require('hlslens').start()<CR>]], { silent = true })
-vim.keymap.set('n', 'g#', [[g#<Cmd>lua require('hlslens').start()<CR>]], { silent = true })
+vim.keymap.set(
+  "n",
+  "n",
+  [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]],
+  { silent = true }
+)
+vim.keymap.set(
+  "n",
+  "N",
+  [[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]],
+  { silent = true }
+)
+vim.keymap.set("n", "*", [[*<Cmd>lua require('hlslens').start()<CR>]], { silent = true })
+vim.keymap.set("n", "#", [[#<Cmd>lua require('hlslens').start()<CR>]], { silent = true })
+vim.keymap.set("n", "g*", [[g*<Cmd>lua require('hlslens').start()<CR>]], { silent = true })
+vim.keymap.set("n", "g#", [[g#<Cmd>lua require('hlslens').start()<CR>]], { silent = true })
 
 -- LSP
 vim.keymap.set("n", "K", vim.lsp.buf.hover, { silent = true })
@@ -76,27 +84,28 @@ local cmp = require("cmp")
 local luasnip = require("luasnip")
 cmp.setup({
   mapping = cmp.mapping.preset.insert({
-    ["<C-b>"] = cmp.mapping.scroll_docs(-4),            -- Scroll the documentation window if visible
-    ["<C-f>"] = cmp.mapping.scroll_docs(4),             -- Scroll the documentation window if visible
-    ["<C-p>"] = cmp.mapping.select_prev_item(),         -- Select the previous item. Set count with large number to select pageup
-    ["<C-n>"] = cmp.mapping.select_next_item(),         -- Select the next item. Set count with large number to select pageup
-    ["<C-y>"] = cmp.mapping.complete(),                 -- Invoke completion
-    ["<C-e>"] = cmp.mapping.abort(),                    -- Closes the completion menu and restore the current line to the state before the current completion was started
+    ["<C-b>"] = cmp.mapping.scroll_docs(-4), -- Scroll the documentation window if visible
+    ["<C-f>"] = cmp.mapping.scroll_docs(4), -- Scroll the documentation window if visible
+    ["<C-p>"] = cmp.mapping.select_prev_item(), -- Select the previous item. Set count with large number to select pageup
+    ["<C-n>"] = cmp.mapping.select_next_item(), -- Select the next item. Set count with large number to select pageup
+    ["<C-y>"] = cmp.mapping.complete(), -- Invoke completion
+    ["<C-e>"] = cmp.mapping.abort(), -- Closes the completion menu and restore the current line to the state before the current completion was started
     ["<CR>"] = cmp.mapping.confirm({ select = false }), -- Accepts the currently selected completion item.
     -- If you didn't select any item and the option table contains `select = true`, nvim-cmp will automatically select the first item.
-    ["<C-k>"] = cmp.mapping(function (fallback)
+    ["<C-k>"] = cmp.mapping(function(fallback)
       if luasnip.expand_or_jumpable() then
         luasnip.expand_or_jump()
       else
         fallback()
       end
-    end, { "i", "s" })
+    end, { "i", "s" }),
   }),
 })
 
 -- gitsigns
-require('gitsigns').setup {
-  on_attach = function(bufnr) local gs = package.loaded.gitsigns
+require("gitsigns").setup({
+  on_attach = function(bufnr)
+    local gs = package.loaded.gitsigns
 
     local function map(mode, l, r, opts)
       opts = opts or {}
@@ -105,20 +114,28 @@ require('gitsigns').setup {
     end
 
     -- Navigation
-    map('n', '[c', function()
-      if vim.wo.diff then return '[c' end
-      vim.schedule(function() gs.prev_hunk() end)
-      return '<Ignore>'
+    map("n", "[c", function()
+      if vim.wo.diff then
+        return "[c"
+      end
+      vim.schedule(function()
+        gs.prev_hunk()
+      end)
+      return "<Ignore>"
     end, { expr = true })
 
-    map('n', ']c', function()
-      if vim.wo.diff then return ']c' end
-      vim.schedule(function() gs.next_hunk() end)
-      return '<Ignore>'
+    map("n", "]c", function()
+      if vim.wo.diff then
+        return "]c"
+      end
+      vim.schedule(function()
+        gs.next_hunk()
+      end)
+      return "<Ignore>"
     end, { expr = true })
 
     -- Actions
-    map('n', '<leader>hd', gs.diffthis)
-    map('n', '<leader>td', gs.toggle_deleted)
-  end
-}
+    map("n", "<leader>hd", gs.diffthis)
+    map("n", "<leader>td", gs.toggle_deleted)
+  end,
+})

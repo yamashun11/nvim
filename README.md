@@ -150,7 +150,7 @@ config: `config/material_conf.lua`
 - [fern.vim](https://github.com/lambdalisue/fern.vim)  
   config: `config/fern_conf.lua`  
   keymaps:
-    - `<Leader>e`: 起動 (オプションは `keymaps.lua` 参照)
+  - `<Leader>e`: 起動 (オプションは `keymaps.lua` 参照)
 - [fern-git-status.vim](https://github.com/lambdalisue/fern-git-status.vim)  
   fern 表示に Git 情報を付加
 
@@ -213,8 +213,10 @@ config: `config/material_conf.lua`
 
 - [machakann/vim-highlightedyank](https://github.com/machakann/vim-highlightedyank)  
   ヤンクハイライト
+
 - [nvim-hlslens](https://github.com/kevinhwang91/nvim-hlslens)  
   サーチハイライト
+
 - [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)  
   インデントハイライト  
   config: `config/indent-blankline_conf.lua`
@@ -271,13 +273,13 @@ config: `config/material_conf.lua`
     - `<C-e>`: 補完中断
     - `<CR>`: 補完決定
 - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)  
-  - LSP 用ソース  
+  LSP 用ソース  
 - [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)  
-  - バッファ用ソース  
+  バッファ用ソース  
 - [cmp-path](https://github.com/hrsh7th/cmp-path)  
-  - パス用ソース  
+  パス用ソース  
 - [cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline)  
-  - コマンドライン用ソース  
+  コマンドライン用ソース  
 - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)  
   スニペット用ソース  
   config でスニペット自作可能    
@@ -300,29 +302,29 @@ config: `config/material_conf.lua`
 
 ### Fortran
 
-- fortls
-  - 言語サーバ
-  - システムに pip3 等でインストール
-  - Neovim に mason でインストール
-  - ルートディレクトリに `.fortls` を置く
-    - 中身がないと怒られるので `{}` と書く
-- fprettify
-  - フォーマッタ
-  - システムに pip 等でインストール
-  - `config/none-ls_conf.lua`  に以下を書く  
-    `extra_args` で実行時のオプションを与える  
-    ```
-    local null_ls = require("null-ls")
-    null_ls.setup({
-      sources = {
-        -- Fortran
-        null_ls.builtins.formatting.fprettify.with({
-          extra_args = { "--indent", "2", "--enable-replacement", "--strip-comments", "--whitespace", "2" },
-        }),
-      },
-    })
-    ```
-    `.fprettify.rc` でのオプション指定は未設定
+- fortls  
+  言語サーバ  
+  システムに pip3 等でインストール  
+  Neovim に mason でインストール  
+  ルートディレクトリに `.fortls` を置き，中身がないと怒られるので `{}` と書く
+
+- fprettify  
+  フォーマッタ  
+  システムに pip 等でインストール  
+  `config/none-ls_conf.lua`  に以下を書く  
+  `extra_args` で実行時のオプションを与える  
+  ```
+  local null_ls = require("null-ls")
+  null_ls.setup({
+    sources = {
+      -- Fortran
+      null_ls.builtins.formatting.fprettify.with({
+        extra_args = { "--indent", "2", "--enable-replacement", "--strip-comments", "--whitespace", "2" },
+      }),
+    },
+  })
+  ```
+  `.fprettify.rc` でのオプション指定は未設定
 
 ### Julia
 
@@ -330,37 +332,38 @@ config: `config/material_conf.lua`
 
 ### LaTeX
 
-- [vimtex](https://github.com/lervag/vimtex)
-  - 多機能なプラグイン
-  - 本構成ではコンパイルと SyncTeX による forward search を担当
-  - `<LocalLeader>ll` で latexmk によるコンパイル，`<LocalLeader>lv` で forward search
-  - viewer として okular を指定しているが環境に合わせる
-  - inverse search は未設定
-  - config: `config/vimtex_conf.lua`
-- texlab
-  - 言語サーバ
-  - オムニ補完を担当し，nvim-lsp と luasnip 経由で Neovim に提供する
-- latexindent
-  - フォーマッタ
-  - Neovim に mason でインストール
-  - `config/none-ls_conf.lua` に以下を書く
-    ```
-    local null_ls = require("null-ls")
-    null_ls.setup({
-      sources = {
-        -- LaTeX
-        null_ls.builtins.formatting.latexindent,
-      },
-    })
-    ```
-    フォーマットオプションは未設定
+- [vimtex](https://github.com/lervag/vimtex)  
+  多機能なプラグイン  
+  本構成ではコンパイルと SyncTeX による forward search を担当  
+  `<LocalLeader>ll` で latexmk によるコンパイル，`<LocalLeader>lv` で forward search  
+  viewer として okular を指定しているが環境に合わせる  
+  inverse search は未設定  
+  config: `config/vimtex_conf.lua`  
+
+- texlab  
+  言語サーバ  
+  オムニ補完を担当し，nvim-lsp と luasnip 経由で Neovim に提供する  
+- latexindent  
+  フォーマッタ  
+  Neovim に mason でインストール  
+  `config/none-ls_conf.lua` に以下を書く  
+  ```
+  local null_ls = require("null-ls")
+  null_ls.setup({
+    sources = {
+      -- LaTeX
+      null_ls.builtins.formatting.latexindent,
+    },
+  })
+  ```
+  フォーマットオプションは未設定
 
 ### Lua
 
-- lua-language-server
-  - 言語サーバ
-  - Neovim に mason でインストール
-  - デフォルトだと `vim` および `use` を未定義扱いするので `config/mason-lspconfig_conf.lua` に以下を書く
+- lua-language-server  
+  言語サーバ  
+  Neovim に mason でインストール  
+  デフォルトだと `vim` および `use` を未定義扱いするので `config/mason-lspconfig_conf.lua` に以下を書く  
   ```
   require("mason-lspconfig").setup_handlers({
     lua_ls = function()
@@ -376,11 +379,13 @@ config: `config/material_conf.lua`
     end,
   })
   ```
-- stylua
-  - フォーマッタ
-- luacheck
-  - リンタ
-  - `config/none-ls_conf.lua` に以下を書く
+
+- stylua  
+  フォーマッタ
+
+- luacheck  
+  リンタ  
+  `config/none-ls_conf.lua` に以下を書く  
   ```
   local null_ls = require("null-ls")
   null_ls.setup({
@@ -396,24 +401,27 @@ config: `config/material_conf.lua`
 
 ### Markdown
 
-- [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
-  - `:MarkdownPreview` でリアルタイムプレビューを表示する
-  - config: `config/markdown-preview_conf.lua`
-  - インストールするには `node.js` と `yarn` が必要
+- [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)  
+  `:MarkdownPreview` でリアルタイムプレビューを表示する  
+  config: `config/markdown-preview_conf.lua`  
+  インストールするには `node.js` と `yarn` が必要  
 
 ### Python
 
-- pyright
-  - 型チェック
-  - Neovim に mason でインストール
-  - インストールには `npm` が必要
-- black
-  - コードフォーマッタ
-- ifort 
-  - import フォーマッタ
-- flake8
-  - リンタ
-  - `config/none-ls_conf.lua` に以下を書く
+- pyright  
+  型チェック  
+  Neovim に mason でインストール  
+  インストールには `npm` が必要    
+
+- black  
+  コードフォーマッタ  
+
+- ifort   
+  import フォーマッタ  
+
+- flake8  
+  リンタ  
+  `config/none-ls_conf.lua` に以下を書く  
   ```
   local null_ls = require("null-ls")
   null_ls.setup({
