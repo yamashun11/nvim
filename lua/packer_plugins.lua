@@ -17,7 +17,12 @@ require("packer").startup({
     })
 
     -- Dashboard
-    use("mhinz/vim-startify")
+    use({
+      "mhinz/vim-startify",
+      config = function()
+        require("config.startify_conf")
+      end,
+    })
 
     -- File Explorer
     use({
