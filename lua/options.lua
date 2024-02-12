@@ -7,7 +7,7 @@ vim.opt.fileencoding = "utf-8"
 vim.opt.ignorecase = true
 vim.opt.laststatus = 2
 vim.opt.list = true
-vim.opt.listchars = { tab = "»-", extends = "»", precedes = "«" }
+vim.opt.listchars = { tab = "»-", extends = "»", precedes = "«", trail = "-"}
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes"
