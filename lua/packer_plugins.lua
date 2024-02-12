@@ -103,7 +103,7 @@ require("packer").startup({
     use({
       "lukas-reineke/indent-blankline.nvim",
       config = function()
-        require("config.indent-blackline_conf")
+        require("config.indent-blankline_conf")
       end,
     })
 
