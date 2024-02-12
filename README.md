@@ -47,8 +47,10 @@ Github: [https://github.com/wbthomason/packer.nvim](https://github.com/wbthomaso
 Unix, Linux:
 
 ```
-git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim  
+git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/opt/packer.nvim  
 ```
+
+Note: 本構成では packer.nvim 自身を遅延読み込みするので，`~/.local/share/nvim/site/pack/packer/start/packer.nvim` ではなく `~/.local/share/nvim/site/pack/packer/opt/packer.nvim` に置いた
 
 ### lazy.nvim
 
