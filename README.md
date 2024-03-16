@@ -418,7 +418,7 @@ config: `config/material_conf.lua`
 - black  
   コードフォーマッタ  
 
-- ifort   
+- isort   
   import フォーマッタ  
 
 - flake8  
