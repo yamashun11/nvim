@@ -20,6 +20,7 @@ vim.opt.swapfile = false
 --vim.opt.tabstop = 8
 vim.opt.termguicolors = true
 vim.opt.title = true
+vim.opt.textwidth=0
 vim.opt.whichwrap = "b,s,[,],<,>"
 
 vim.g.markdown_recommended_style = 0
