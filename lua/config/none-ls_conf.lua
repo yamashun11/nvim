@@ -11,12 +11,12 @@ null_ls.setup({
     null_ls.builtins.diagnostics.flake8,
     -- Lua
     null_ls.builtins.formatting.stylua,
-    null_ls.builtins.diagnostics.luacheck.with({
-      extra_args = { "--globals", "vim", "--globals", "use" },
-    }),
+    --null_ls.builtins.diagnostics.luacheck.with({
+    --  extra_args = { "--globals", "vim", "--globals", "use" },
+    --}),
     -- Fortran
     null_ls.builtins.formatting.fprettify.with({
-      extra_args = { "--indent", "2", "--enable-replacement", "--strip-comments", "--whitespace", "2" },
+      extra_args = { "--indent", "2", "--enable-replacement", "--strip-comments", "--whitespace", "2", "--line-length", "256"},
     }),
     -- LaTeX
     null_ls.builtins.formatting.latexindent,
