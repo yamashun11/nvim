@@ -407,6 +407,7 @@ config: `config/material_conf.lua`
   `:MarkdownPreview` でリアルタイムプレビューを表示する  
   config: `config/markdown-preview_conf.lua`  
   インストールするには `node.js` と `yarn` が必要  
+  本プラグインに関しては packer ではなく手動でのインストールがうまく動作した（詳細は GitHub リンク参照）  
 
 ### Python
 
