@@ -126,7 +126,8 @@ require("packer").startup({
     })
     -- Use a Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua.
     use({
-      "nvimtools/none-ls.nvim",
+      --"nvimtools/none-ls.nvim",
+      "jose-elias-alvarez/null-ls.nvim",
       config = function()
         require("config.none-ls_conf")
       end,
@@ -164,11 +165,6 @@ require("packer").startup({
     -- Markdown
     use({
       "iamcco/markdown-preview.nvim",
-      run = "cd app && npm install",
-      setup = function ()
-        vim.g.mkdp_filetypes = { "markdown" }
-      end,
-      ft = { "markdown" },
       config = function()
         require("config.markdown-preview_conf")
       end,
