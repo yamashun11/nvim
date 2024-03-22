@@ -11,7 +11,8 @@ vim.keymap.set("t", "っｊ", "<C-\\><C-n>", { silent = true })
 vim.keymap.set("n", "<Leader><Leader>", "<C-w>w", { silent = true })
 
 -- Fern
-vim.keymap.set("n", "<Leader>e", "<Cmd>Fern . -reveal=% -drawer -toggle<CR>", { silent = true })
+--vim.keymap.set("n", "<Leader>e", "<Cmd>Fern . -reveal=% -drawer -toggle<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>e", "<Cmd>Fern . -reveal=%<CR>", { silent = true })
 
 -- Telescope
 vim.keymap.set("n", "<Leader>ff", "<Cmd>Telescope find_files hidden=true<CR>", { silent = true })
