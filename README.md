@@ -160,7 +160,7 @@ config: `config/material_conf.lua`
 
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)  
   keymaps:
-  - `<Leader>fg`: ファイル名検索
+  - `<Leader>ff`: ファイル名検索
   - `<Leader>fg`: ファイル内容検索 (ripgrep が必要)
   - `<Leader>fb`: バッファ検索
   - `<Leader>fh`: ヘルプ辺作
