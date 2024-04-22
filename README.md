@@ -163,7 +163,7 @@ config: `config/material_conf.lua`
   - `<Leader>ff`: ファイル名検索
   - `<Leader>fg`: ファイル内容検索 (ripgrep が必要)
   - `<Leader>fb`: バッファ検索
-  - `<Leader>fh`: ヘルプ辺作
+  - `<Leader>fh`: ヘルプ検索
   - `<Leader>fn`: 通知検索
   - `<Leader>fo`: 最近開いたファイル検索
 
