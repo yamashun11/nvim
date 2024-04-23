@@ -31,6 +31,10 @@ vim.keymap.set("n", "<Leader>to", "<Cmd>WintabsOnly<CR>", { silent = true })
 vim.keymap.set("n", "<C-w>c", "<Cmd>WintabsCloseWindow<CR>", { silent = true })
 vim.keymap.set("n", "<C-w>o", "<Cmd<Cmd>WintabsOnlyWindow<CR>", { silent = true })
 
+-- winresizer
+vim.g.winresizer_start_key = ""
+vim.keymap.set("n", "<C-w>e", "<Cmd>WinResizerStartResize<CR>", { silent = true })
+
 -- Toggleterm
 vim.keymap.set("n", "<Leader>tt", "<Cmd>ToggleTerm<CR>", { silent = true })
 
