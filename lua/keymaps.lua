@@ -38,6 +38,9 @@ vim.keymap.set("n", "<C-w>e", "<Cmd>WinResizerStartResize<CR>", { silent = true 
 -- Toggleterm
 -- See: config/toggleterm_conf.lua
 
+-- Startify
+vim.keymap.set("n", "<Leader>s", "<Cmd>Startify<CR>", { silent = true })
+
 -- Lazygit
 vim.keymap.set("n", "<Leader>lg", "<Cmd>lua _lazygit_toggle()<CR>", { silent = true })
 
