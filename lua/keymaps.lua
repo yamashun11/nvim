@@ -36,7 +36,7 @@ vim.g.winresizer_start_key = ""
 vim.keymap.set("n", "<C-w>e", "<Cmd>WinResizerStartResize<CR>", { silent = true })
 
 -- Toggleterm
-vim.keymap.set("n", "<Leader>tt", "<Cmd>ToggleTerm<CR>", { silent = true })
+-- See: config/toggleterm_conf.lua
 
 -- Lazygit
 vim.keymap.set("n", "<Leader>lg", "<Cmd>lua _lazygit_toggle()<CR>", { silent = true })
