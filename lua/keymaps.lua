@@ -32,7 +32,8 @@ vim.keymap.set("n", "<C-w>c", "<Cmd>WintabsCloseWindow<CR>", { silent = true })
 vim.keymap.set("n", "<C-w>o", "<Cmd<Cmd>WintabsOnlyWindow<CR>", { silent = true })
 
 -- winresizer
-vim.keymap.set("n", "<C-w>e", "<Cmd>WinResizerStartResize<CR>", { silent = true })
+--vim.keymap.set("n", "<C-w>e", "<Cmd>WinResizerStartResize<CR>", { silent = true })
+vim.g.winresizer_start_key = "<C-w>e"
 
 -- Toggleterm
 -- See: config/toggleterm_conf.lua
