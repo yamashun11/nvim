@@ -71,5 +71,11 @@ require("gitsigns").setup({
     -- Actions
     map("n", "<leader>hd", gs.diffthis)
     map("n", "<leader>td", gs.toggle_deleted)
+    map("n", "<leader>hs", gs.stage_hunk)
+    map("n", "<leader>hr", gs.reset_hunk)
+    map("n", "<leader>hu", gs.undo_stage_hunk)
+    map("n", "<leader>hp", gs.preview_hunk)
+    map("v", "<leader>hs", function() gs.stage_hunk {vim.fn.line("."), vim.fn.line("v")} end)
+    map("v", "<leader>hr", function() gs.reset_hunk {vim.fn.line("."), vim.fn.line("v")} end)
   end,
 })
