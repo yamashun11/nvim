@@ -66,5 +66,10 @@ require("material").setup({
   custom_highlights = {}, -- Overwrite highlights with your own
 })
 
+vim.cmd [[
+  autocmd ColorScheme * highlight! link FloatBorder NormalFloat
+  colorscheme material
+]]
+
 -- Apply the colorscheme
 vim.cmd("colorscheme material")
