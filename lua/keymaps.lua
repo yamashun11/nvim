@@ -82,8 +82,8 @@ vim.keymap.set("n", "gf", function()
 end, { silent = true })
 -- Diagnostics
 vim.keymap.set("n", "ge", vim.diagnostic.open_float, { silent = true })
-vim.keymap.set("n", "g[", vim.diagnostic.goto_prev, { silent = true })
-vim.keymap.set("n", "g]", vim.diagnostic.goto_next, { silent = true })
+vim.keymap.set("n", "[g", vim.diagnostic.goto_prev, { silent = true })
+vim.keymap.set("n", "]g", vim.diagnostic.goto_next, { silent = true })
 vim.keymap.set("n", "gl", vim.diagnostic.setloclist, { silent = true })
 
 -- Completion
