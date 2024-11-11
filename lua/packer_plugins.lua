@@ -10,9 +10,19 @@ require("packer").startup({
 
     -- Colorscheme
     use({
-      "marko-cerovac/material.nvim",
+      "rebelot/kanagawa.nvim",
       config = function()
-        require("config.material_conf")
+        require("kanagawa").setup({
+          commentStyle = { italic = false },
+          keywordStyle = { italic = false },
+          statementStyle = { bold = false },
+          dimInactive = true,
+        })
+        vim.cmd [[
+          autocmd ColorScheme * highlight! link FloatBorder NormalFloat
+          colorscheme kanagawa
+        ]]
+        vim.cmd("colorscheme kanagawa")
       end,
     })
 
