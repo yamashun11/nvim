@@ -1,6 +1,9 @@
 -- Leader
 vim.g.mapleader = " "
 
+-- File reload
+vim.keymap.set("n", "<Leader>r", "<Cmd>e!<CR>", { silent = true })
+
 -- Esc
 vim.keymap.set("i", "jj", "<esc>", { silent = true })
 vim.keymap.set("i", "っｊ", "<esc>", { silent = true })
