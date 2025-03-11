@@ -35,3 +35,5 @@ vim.g.startify_custom_header = {
 "",
 "",
 }
+
+vim.g.startify_change_to_dir = 0
