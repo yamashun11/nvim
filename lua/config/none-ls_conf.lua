@@ -16,7 +16,7 @@ null_ls.setup({
     --}),
     -- Fortran
     null_ls.builtins.formatting.fprettify.with({
-      extra_args = { "--indent", "2", "--enable-replacements", "--c-relations", "--whitespace", "2", "--case", "1", "1", "1", "1", "--strict-indent", "--line-length", "1024"},
+      extra_args = { '--indent', '2', '--enable-replacements', '--c-relations', '--whitespace', '2', '--case', '1', '1', '1', '1', '--strict-indent', '--line-length', '1024'},
     }),
     -- LaTeX
     null_ls.builtins.formatting.latexindent,
