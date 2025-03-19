@@ -114,14 +114,6 @@ require("packer").startup({
     -- Highlighted search
     use("kevinhwang91/nvim-hlslens")
 
-    -- Highlighted indent
-    use({
-      "lukas-reineke/indent-blankline.nvim",
-      config = function()
-        require("config.indent-blankline_conf")
-      end,
-    })
-
     use("nvim-treesitter/nvim-treesitter-context")
 
     -- LSP
