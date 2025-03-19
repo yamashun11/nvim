@@ -166,13 +166,8 @@ require("packer").startup({
       end,
     })
 
-    -- Markdown
-    use({
-      "iamcco/markdown-preview.nvim",
-      config = function()
-        require("config.markdown-preview_conf")
-      end,
-    })
+    ---- Markdown
+    use("OXY2DEV/markview.nvim")
 
     -- Git
     use({
