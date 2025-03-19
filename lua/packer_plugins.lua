@@ -122,6 +122,8 @@ require("packer").startup({
       end,
     })
 
+    use("nvim-treesitter/nvim-treesitter-context")
+
     -- LSP
     use({
       "williamboman/mason-lspconfig.nvim",
