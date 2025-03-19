@@ -112,16 +112,6 @@ require("packer").startup({
     -- Highlighted search
     use("kevinhwang91/nvim-hlslens")
 
-    use({
-      "nvim-treesitter/nvim-treesitter-context",
-      requires = {
-        {
-          "nvim-treesitter/nvim-treesitter",
-          run = [[<Cmd>TSInstall fortran<CR>]]
-        },
-      },
-    })
-
     -- LSP
     use({
       "williamboman/mason-lspconfig.nvim",
