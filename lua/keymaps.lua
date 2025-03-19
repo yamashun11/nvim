@@ -32,7 +32,7 @@ vim.keymap.set("n", "<Leader>tc", "<Cmd>WintabsClose<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>tu", "<Cmd>WintabsUndo<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>to", "<Cmd>WintabsOnly<CR>", { silent = true })
 vim.keymap.set("n", "<C-w>c", "<Cmd>WintabsCloseWindow<CR>", { silent = true })
-vim.keymap.set("n", "<C-w>o", "<Cmd<Cmd>WintabsOnlyWindow<CR>", { silent = true })
+vim.keymap.set("n", "<C-w>o", "<Cmd>WintabsOnlyWindow<CR>", { silent = true })
 
 -- winresizer
 vim.g.winresizer_start_key = ""
@@ -95,3 +95,9 @@ vim.keymap.set("n", "gl", vim.diagnostic.setloclist, { silent = true })
 
 -- gitsigns
 -- See: config/gitsigns_conf.lua
+
+-- nvim-treesitter-context
+vim.keymap.set("n", "[[", function()
+  require("treesitter-context").go_to_context(vim.v.count1)
+end)
+

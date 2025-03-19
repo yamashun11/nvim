@@ -89,7 +89,6 @@ require("packer").startup({
     -- Terminal
     use({
       "akinsho/toggleterm.nvim",
-      tag = "*",
       config = function()
         require("config.toggleterm_conf")
       end,
@@ -113,7 +112,15 @@ require("packer").startup({
     -- Highlighted search
     use("kevinhwang91/nvim-hlslens")
 
-    use("nvim-treesitter/nvim-treesitter-context")
+    use({
+      "nvim-treesitter/nvim-treesitter-context",
+      requires = {
+        {
+          "nvim-treesitter/nvim-treesitter",
+          run = [[<Cmd>TSInstall fortran<CR>]]
+        },
+      },
+    })
 
     -- LSP
     use({
