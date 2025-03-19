@@ -112,6 +112,14 @@ require("packer").startup({
     -- Highlighted search
     use("kevinhwang91/nvim-hlslens")
 
+    -- Marks
+    use({
+      "chentoast/marks.nvim",
+      config = function()
+        require("marks").setup()
+      end,
+    })
+
     -- LSP
     use({
       "williamboman/mason-lspconfig.nvim",
