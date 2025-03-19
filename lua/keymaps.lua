@@ -35,8 +35,8 @@ vim.keymap.set("n", "<C-w>c", "<Cmd>WintabsCloseWindow<CR>", { silent = true })
 vim.keymap.set("n", "<C-w>o", "<Cmd<Cmd>WintabsOnlyWindow<CR>", { silent = true })
 
 -- winresizer
---vim.keymap.set("n", "<C-w>e", "<Cmd>WinResizerStartResize<CR>", { silent = true })
-vim.g.winresizer_start_key = "<C-w>e"
+vim.g.winresizer_start_key = ""
+vim.keymap.set("n", "<C-w>e", "<Cmd>WinResizerStartResize<CR>", { silent = true })
 
 -- Toggleterm
 -- See: config/toggleterm_conf.lua
@@ -83,6 +83,7 @@ vim.keymap.set("n", "ga", vim.lsp.buf.code_action, { silent = true })
 vim.keymap.set("n", "gf", function()
   vim.lsp.buf.format({ async = true })
 end, { silent = true })
+
 -- Diagnostics
 vim.keymap.set("n", "ge", vim.diagnostic.open_float, { silent = true })
 vim.keymap.set("n", "[g", vim.diagnostic.goto_prev, { silent = true })

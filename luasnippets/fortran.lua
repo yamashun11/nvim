@@ -12,7 +12,7 @@ return {
     t('('),
     i(2, 'args'),
     t({')', indent}),
-    i(3, 'contents'),
+    i(3, 'body'),
     t({'', 'end subroutine '}),
     rep(1)
   }),
@@ -25,7 +25,7 @@ return {
     t(', '),
     i(3, 'end'),
     t({ '', indent}),
-    i(4, 'contents'),
+    i(4, 'body'),
     t({'', 'end do'}),
   }),
 }
