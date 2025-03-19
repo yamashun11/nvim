@@ -154,6 +154,7 @@ require("packer").startup({
           config = function()
             require("config.luasnip_conf")
           end,
+          requires = "saadparwaiz1/cmp_luasnip",
         },
       },
     })
