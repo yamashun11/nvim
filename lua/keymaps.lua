@@ -96,3 +96,5 @@ vim.keymap.set("n", "gl", vim.diagnostic.setloclist, { silent = true })
 -- gitsigns
 -- See: config/gitsigns_conf.lua
 
+-- Quickfix
+vim.keymap.set("n", "<Leader>c", "<Cmd>cclose<CR>", { silent = true })
