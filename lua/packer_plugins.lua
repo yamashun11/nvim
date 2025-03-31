@@ -56,18 +56,6 @@ require("packer").startup({
       },
     })
 
-    -- Scroll bar
-    use({
-      "petertriho/nvim-scrollbar",
-      config = function()
-        require("config.scrollbar_conf")
-      end,
-      requires = {
-        "kevinhwang91/nvim-hlslens",
-        "lewis6991/gitsigns.nvim",
-      },
-    })
-
     -- Status bar
     use({
       "nvim-lualine/lualine.nvim",
